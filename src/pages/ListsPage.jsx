@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Plus, ListTodo, Trash2, ArrowLeft, Check, GripVertical, Edit3, X } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
 import {
   DndContext,
   closestCenter,
@@ -280,10 +281,8 @@ function ListDetailView() {
     if (id) {
       fetchListItems(id);
       // Fetch list info
-      import('../lib/supabaseClient').then(({ supabase }) => {
-        supabase.from('lists').select('*').eq('id', id).single().then(({ data }) => {
-          setListInfo(data);
-        });
+      supabase.from('lists').select('*').eq('id', id).single().then(({ data }) => {
+        setListInfo(data);
       });
     }
   }, [id]);
