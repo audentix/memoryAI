@@ -1,0 +1,42 @@
+{
+  "name": "MemorAI",
+  "short_name": "MemorAI",
+  "description": "The memory layer above all your apps — AI-powered reminders, lists, calendar, and memory vault.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "AI Chat",
+      "url": "/chat",
+      "description": "Talk to your AI assistant"
+    },
+    {
+      "name": "Reminders",
+      "url": "/reminders",
+      "description": "View all reminders"
+    },
+    {
+      "name": "Lists",
+      "url": "/lists",
+      "description": "Manage your lists"
+    }
+  ]
+}
